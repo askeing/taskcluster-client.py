@@ -135,7 +135,6 @@ def makeSingleHttpRequest(method, url, payload, headers):
   response = requests.request(method.upper(), url, data=payload, headers=headers)
   log.debug('Received HTTP Status:  %s' % response.status_code)
   log.debug('Received HTTP Headers: %s' % str(response.headers))
-  log.debug('Received HTTP Payload: %s (limit 1024 char)' % str(response.text)[:1024])
 
   return response
 
